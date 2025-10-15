@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Webpages</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+      <div class="container">
+    <h1>Calculator</h1>
+    <div id="form-container">
+      <input placeholder="Enter a number"
+             type="number"
+             id="input-number"
+             required
+      />
+      <button id="calc-btn">calculate</button>
+    </div>
+
+    <div class="result-container">
+      <div class="result">
+        <p>Square</p>
+        <p id="squared-result">?</p>
+      </div>
+
+      <div class="result">
+        <p>Cube</p>
+        <p id="cubed-result">?</p>
+      </div>
+    </div>
+
+    <div class="history-section">
+      <p>History</p>
+      <div id="history-container"></div>
+      <button id="delete-btn">delete last entry</button>
+      <button id="clear-btn">clear history</button>
+    </div>
+
+
+    
+  </div>
+  </body>
+</html>
