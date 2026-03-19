@@ -72,21 +72,21 @@ Check out the live version hosted on GitHub Pages:
 
 ## 📁 Project Structure
 
+```
 Square-Cube-Calculator/
 ├── index.html
 ├── README.md
 ├── css/
-│ ├── reset.css
-│ └── style.css
+│   ├── reset.css
+│   └── style.css
 ├── js/
-│ └── main.js
+│   └── main.js
 └── screenshots/
-├── calculator-main.png
-├── calculator-error.png
-├── calculator-history.png
-└── calculator-mobile.png
-
-
+    ├── calculator-main.png
+    ├── calculator-error.png
+    ├── calculator-history.png
+    └── calculator-mobile.png
+```
 ---
 
 ## 🙏 Acknowledgements
