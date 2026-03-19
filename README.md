@@ -1,12 +1,9 @@
 # 🧮 Square & Cube Calculator
 
-[![GitHub license](https://img.shields.io/github/license/NothyPro/Square-Cube-Calculator)](LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/NothyPro/Square-Cube-Calculator)](https://github.com/NothyPro/Square-Cube-Calculator/commits/main)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fnothypro.github.io%2FSquare-Cube-Calculator%2F)](https://nothypro.github.io/Square-Cube-Calculator/)
 
 A clean, accessible, and user‑friendly web app that instantly calculates the **square** and **cube** of any number you enter. Built with modern HTML5, CSS3, and JavaScript—now with enhanced UI/UX and full keyboard support.
 
-![Calculator Screenshot](screenshots/calculator-main.png)  
+<img src="screenshots/calculator-main.png" alt="Main View" width="600">
 *Main interface – enter a number, see results, and track your history.*
 
 ---
@@ -34,7 +31,7 @@ This project was carefully refined to follow modern best practices:
 - **Reduced Motion** – Respects `prefers-reduced-motion` for users who prefer less animation.
 
 > 📸 **Screenshot:** Error message in action  
-> ![Error Screenshot](screenshots/calculator-error.png)
+> <img src="screenshots/calculator-error.png" alt="Error Message" width="300"> 
 
 ---
 
@@ -57,14 +54,11 @@ Check out the live version hosted on GitHub Pages:
 
 | Main View | History & Results |
 |-----------|-------------------|
-| ![Main](screenshots/calculator-main.png) | ![History](screenshots/calculator-history.png) |
+| <img src="screenshots/calculator-main.png" alt="Main View" width="300"> | <img src="screenshots/calculator-history.png" alt="History View" width="300"> |
 
 | Mobile View | Error State |
 |-------------|-------------|
-| ![Mobile](screenshots/calculator-mobile.png) | ![Error](screenshots/calculator-error.png) |
-
-*(Replace the placeholder paths with your actual screenshot filenames.)*
-
+| <img src="screenshots/calculator-mobile.png" alt="Mobile View" width="200"> | <img src="screenshots/calculator-error.png" alt="Error Message" width="300"> |
 ---
 
 ## 🛠️ How to Use
@@ -92,19 +86,6 @@ Square-Cube-Calculator/
 ├── calculator-history.png
 └── calculator-mobile.png
 
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/NothyPro/Square-Cube-Calculator/issues).
-
----
-
-## 📄 License
-
-This project is [MIT](LICENSE) licensed – use it freely, learn from it, and improve it.
 
 ---
 
