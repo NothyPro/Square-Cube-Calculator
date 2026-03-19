@@ -1,73 +1,98 @@
-//create references to elements
+// DOM elements
 const inputNumber = document.getElementById("input-number");
 const squaredResult = document.getElementById("squared-result");
 const cubedResult = document.getElementById("cubed-result");
-const historyContainer = document.getElementById("history-container");
+const historyList = document.getElementById("history-list");
+const errorMessage = document.getElementById("error-message");
 
-//create event listeners
-document.getElementById("calc-btn").addEventListener("click", calculateResult);
+// Buttons
+const calcBtn = document.getElementById("calc-btn");
+const deleteBtn = document.getElementById("delete-btn");
+const clearBtn = document.getElementById("clear-btn");
 
-document.getElementById("delete-btn").addEventListener("click", deleteLastEntry);
+// Event listeners
+calcBtn.addEventListener("click", calculateResult);
+deleteBtn.addEventListener("click", deleteLastEntry);
+clearBtn.addEventListener("click", clearHistory);
 
-document.getElementById("clear-btn").addEventListener("click", clearHistory);
+// Press Enter to calculate
+inputNumber.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    calculateResult();
+  }
+});
 
+// Clear error when user starts typing
+inputNumber.addEventListener("input", () => {
+  if (errorMessage.textContent) {
+    errorMessage.textContent = "";
+  }
+});
 
-//function to run when I click calculate button
 function calculateResult() {
-  console.log("calculate");
-  //I need the number that the user input
-  let userNum = inputNumber.value;
-  console.log("userNum ", userNum);
+  errorMessage.textContent = "";
 
-  //calculate the square of the userNum
-  let square = userNum * userNum;
-  console.log("square", square);
+  const rawValue = inputNumber.value.trim();
+  
+  if (rawValue === "") {
+    errorMessage.textContent = "Please enter a number.";
+    inputNumber.focus();
+    return;
+  }
 
-  //Now I have the square, what do I do with it?
-  squaredResult.innerText = square;
-  // squaredResult.innerHTML = `<strong>${square}</strong>`; (diff between innerText and innerHTML)
+  const userNum = Number(rawValue);
+  
+  if (isNaN(userNum)) {
+    errorMessage.textContent = "Please enter a valid number.";
+    inputNumber.focus();
+    return;
+  }
 
-  //calculate the square of the userNum
-  let cube = square * userNum;
+  const square = userNum * userNum;
+  const cube = square * userNum; // or userNum ** 3
 
-  //Now I have the cube, what do I do with it?
-  cubedResult.innerText = cube;
+  squaredResult.textContent = square;
+  cubedResult.textContent = cube;
 
-  //I want to add the input number to the history section
-  //I want to add a p tag with number
-  //create a p element
-  //   let newNumber = document.createElement("p");
-  //   //<p></p> this is what I created
-  //   // Now to add content to it
-  //   newNumber.innerText = userNum;
-  //   //add this to the div
-  //   historyContainer.appendChild(newNumber);
+  addHistoryItem(userNum, square, cube);
 
-  //alternate method
-  historyContainer.innerHTML += `<p>${userNum}</p>`;
-
-
-
-  //clear the input box (do the right steps at the right place/time)
   inputNumber.value = "";
+  inputNumber.focus();
 }
 
+function addHistoryItem(number, square, cube) {
+  const listItem = document.createElement("li");
+  listItem.className = "history-item";
 
-// create a function for clear history
-function clearHistory(){
-    console.log('clear');
-    historyContainer.innerHTML = '';
+  const numberSpan = document.createElement("span");
+  numberSpan.className = "number";
+  numberSpan.textContent = number;
 
+  const detailsSpan = document.createElement("span");
+  detailsSpan.className = "details";
+  detailsSpan.textContent = ` → square: ${square}, cube: ${cube}`;
+
+  listItem.appendChild(numberSpan);
+  listItem.appendChild(detailsSpan);
+
+  historyList.appendChild(listItem);
+
+  // Auto-scroll to the newest entry
+  const container = document.getElementById("history-container");
+  container.scrollTop = container.scrollHeight;
 }
 
-//create a function for delete last entry
-function deleteLastEntry(){
-    console.log('delete');
-    //I need the last element of the history container
-    let lastEntry = historyContainer.lastElementChild;
-    console.log('lastEntry', lastEntry);
-    if(lastEntry) {
-        historyContainer.removeChild(lastEntry);
-    }
+function deleteLastEntry() {
+  const lastItem = historyList.lastElementChild;
+  if (lastItem) {
+    historyList.removeChild(lastItem);
+  } else {
+    errorMessage.textContent = "No history entries to delete.";
+    setTimeout(() => { errorMessage.textContent = ""; }, 2000);
+  }
+}
 
+function clearHistory() {
+  historyList.innerHTML = "";
+  errorMessage.textContent = "";
 }

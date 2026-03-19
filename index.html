@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Webpages</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square and Cube Calculator</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <script src="js/main.js" defer></script>
   </head>
   <body>
-      <div class="container">
-    <h1>Calculator</h1>
-    <div id="form-container">
-      <input placeholder="Enter a number"
-             type="number"
-             id="input-number"
-             required
-      />
-      <button id="calc-btn">calculate</button>
-    </div>
+    <main>
+    <div class="calculator">
+      <h1>Square & Cube Calculator</h1>
 
-    <div class="result-container">
-      <div class="result">
-        <p>Square</p>
-        <p id="squared-result">?</p>
+      <div class="input-group">
+        <label for="input-number" class="visually-hidden">Enter a number</label>
+        <input 
+          type="number" 
+          id="input-number" 
+          placeholder="e.g., 5" 
+          aria-label="Enter a number to calculate its square and cube"
+          required
+        />
+        <button id="calc-btn" aria-label="Calculate">Calculate</button>
       </div>
 
-      <div class="result">
-        <p>Cube</p>
-        <p id="cubed-result">?</p>
+      <div class="error-message" id="error-message" role="alert" aria-live="assertive"></div>
+
+      <div class="results" aria-live="polite" aria-atomic="true">
+        <div class="result-card">
+          <h2>Square</h2>
+          <p id="squared-result" class="result-value">—</p>
+        </div>
+        <div class="result-card">
+          <h2>Cube</h2>
+          <p id="cubed-result" class="result-value">—</p>
+        </div>
       </div>
+
+      <section class="history-section" aria-labelledby="history-heading">
+        <h2 id="history-heading">History</h2>
+        <div id="history-container" aria-live="polite" aria-atomic="false">
+          <ul id="history-list"></ul>
+        </div>
+        <div class="history-actions">
+          <button id="delete-btn" aria-label="Delete last entry">Delete Last</button>
+          <button id="clear-btn" aria-label="Clear all history">Clear All</button>
+        </div>
+      </section>
     </div>
-
-    <div class="history-section">
-      <p>History</p>
-      <div id="history-container"></div>
-      <button id="delete-btn">delete last entry</button>
-      <button id="clear-btn">clear history</button>
-    </div>
-
-
-    
-  </div>
+  </main>
   </body>
 </html>
