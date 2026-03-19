@@ -1,2 +1,118 @@
-# Square-Cube-Calculator
-This is a calculator that takes a number input and outputs its square and cube. It can delete the last entry as well as clear all entries. as well as 
+# 🧮 Square & Cube Calculator
+
+[![GitHub license](https://img.shields.io/github/license/NothyPro/Square-Cube-Calculator)](LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/NothyPro/Square-Cube-Calculator)](https://github.com/NothyPro/Square-Cube-Calculator/commits/main)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fnothypro.github.io%2FSquare-Cube-Calculator%2F)](https://nothypro.github.io/Square-Cube-Calculator/)
+
+A clean, accessible, and user‑friendly web app that instantly calculates the **square** and **cube** of any number you enter. Built with modern HTML5, CSS3, and JavaScript—now with enhanced UI/UX and full keyboard support.
+
+![Calculator Screenshot](screenshots/calculator-main.png)  
+*Main interface – enter a number, see results, and track your history.*
+
+---
+
+## ✨ Features
+
+- **Instant Results** – Get square and cube values as soon as you hit *Calculate* (or press `Enter`).
+- **History Log** – Every calculation is saved with the original number, its square, and its cube.
+- **Delete & Clear** – Remove the last entry or wipe the entire history with one click.
+- **Keyboard Friendly** – Focus on the input, type a number, and press `Enter` – no mouse needed.
+- **Responsive Design** – Works beautifully on desktop, tablet, and mobile.
+- **Accessibility Ready** – ARIA labels, focus indicators, and semantic HTML for screen readers.
+
+---
+
+## 🎨 UI/UX & Design Improvements
+
+This project was carefully refined to follow modern best practices:
+
+- **Typography** – Uses a system‑font stack for native readability and a clear hierarchy (headings, results, labels).
+- **Colour & Contrast** – High‑contrast colours meet WCAG standards; a calming blue primary with neutral backgrounds.
+- **Visual Feedback** – Buttons have hover/focus states, input fields highlight, and errors appear with polite alerts.
+- **Layout** – Card‑based results, grouped history actions, and consistent spacing create a clean, intuitive interface.
+- **Error Handling** – Friendly messages guide you when input is empty or invalid.
+- **Reduced Motion** – Respects `prefers-reduced-motion` for users who prefer less animation.
+
+> 📸 **Screenshot:** Error message in action  
+> ![Error Screenshot](screenshots/calculator-error.png)
+
+---
+
+## 🧱 Built With
+
+- **HTML5** – Semantic structure (`<main>`, `<section>`, `<ul>`)
+- **CSS3** – Flexbox, Grid, custom properties, and a dedicated reset file
+- **JavaScript (ES6)** – Event handling, DOM manipulation, live region updates
+
+---
+
+## 🚀 Live Demo
+
+Check out the live version hosted on GitHub Pages:  
+👉 [**Square-Cube-Calculator Demo**](https://nothypro.github.io/Square-Cube-Calculator/)
+
+---
+
+## 📸 Screenshots
+
+| Main View | History & Results |
+|-----------|-------------------|
+| ![Main](screenshots/calculator-main.png) | ![History](screenshots/calculator-history.png) |
+
+| Mobile View | Error State |
+|-------------|-------------|
+| ![Mobile](screenshots/calculator-mobile.png) | ![Error](screenshots/calculator-error.png) |
+
+*(Replace the placeholder paths with your actual screenshot filenames.)*
+
+---
+
+## 🛠️ How to Use
+
+1. **Enter a number** in the input field (e.g., `5`).
+2. Click **Calculate** or press `Enter` – the square (`25`) and cube (`125`) appear instantly.
+3. Each calculation is added to the history below.
+4. Use **Delete Last** to remove the most recent entry, or **Clear All** to empty the history.
+
+---
+
+## 📁 Project Structure
+
+Square-Cube-Calculator/
+├── index.html
+├── README.md
+├── css/
+│ ├── reset.css
+│ └── style.css
+├── js/
+│ └── main.js
+└── screenshots/
+├── calculator-main.png
+├── calculator-error.png
+├── calculator-history.png
+└── calculator-mobile.png
+
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!  
+Feel free to check the [issues page](https://github.com/NothyPro/Square-Cube-Calculator/issues).
+
+---
+
+## 📄 License
+
+This project is [MIT](LICENSE) licensed – use it freely, learn from it, and improve it.
+
+---
+
+## 🙏 Acknowledgements
+
+- Inspired by the need for a simple, accessible calculator.
+- Built with guidance from UI/UX best practices and accessibility standards.
+
+---
+
+**Happy Calculating!** 🎉
