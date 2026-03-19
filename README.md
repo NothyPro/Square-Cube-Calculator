@@ -3,7 +3,7 @@
 
 A clean, accessible, and user‑friendly web app that instantly calculates the **square** and **cube** of any number you enter. Built with modern HTML5, CSS3, and JavaScript—now with enhanced UI/UX and full keyboard support.
 
-<img src="screenshots/calculator-main.png" alt="Main View" width="600">
+<img src="screenshots/calculator-main.png" alt="Main View" width="400">
 *Main interface – enter a number, see results, and track your history.*
 
 ---
